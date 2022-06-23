@@ -2,12 +2,36 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {Icons, ImageAssets} from '@assets';
-import {Buttons, Layouts, ProductCard} from '@components';
+import {
+  Buttons,
+  Layouts,
+  ProductCard,
+  ProductOptionsCard,
+  SlideUpManager,
+  slideUpMotionLayerAnimation,
+} from '@components';
 import {ColorPalates, fontStyles} from '@themes';
 
 interface ProductDetailScreenProps {}
 
 const ProductDetailScreen: React.FC<ProductDetailScreenProps> = () => {
+  const onOpenOptionCard = () => {
+    SlideUpManager.present(() => <ProductOptionsCard />, {
+      animation: slideUpMotionLayerAnimation,
+      style: {
+        justifyContent: 'flex-end',
+        alignItem: 'stretch',
+      },
+      layoutConfig: {
+        hasOverView: true,
+        overViewColor: ColorPalates.black,
+        overViewOpacity: 0.5,
+        animationContainerStyle: {
+          alignItem: 'stretch',
+        },
+      },
+    });
+  };
   return (
     <View style={styles.container}>
       <FastImage source={ImageAssets.tShirt} style={styles.image} />
@@ -16,6 +40,7 @@ const ProductDetailScreen: React.FC<ProductDetailScreenProps> = () => {
       </Buttons.IconButton>
       <ProductCard />
       <Buttons.PrimaryButton
+        onPress={onOpenOptionCard}
         styleFunc={pressed => ({
           ...styles.expandButton,
           opacity: pressed ? 0.8 : 1,

@@ -19,7 +19,8 @@ const IconButton: React.FC<IconButtonProps> = ({children, style, onPress}) => {
           opacity: pressed ? 0.8 : 1,
         },
         style,
-      ]}>
+      ]}
+      pressableProps={{hitSlop: 24}}>
       {children}
     </PrimaryButton>
   );

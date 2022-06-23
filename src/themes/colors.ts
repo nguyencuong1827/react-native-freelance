@@ -9,4 +9,5 @@ export const ColorPalates = {
   gray: '#9CA1B8',
   gray_blue: '#3A3F55',
   yellow: '#FDCC0B',
+  stroke: '#D3D3E1',
 };

@@ -27,3 +27,4 @@ export const Title_Bold = {
   fontSize: 16,
   lineHeight: 24,
 };
+

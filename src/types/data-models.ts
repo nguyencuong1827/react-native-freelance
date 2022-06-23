@@ -11,3 +11,9 @@ export interface ProductDetail {
   isLike: boolean;
   mapColorSizeAmount: Array<MapColorSizeAmount>;
 }
+
+export interface ProductOption {
+  name: string;
+  disabled: boolean;
+  isPicked: boolean;
+}

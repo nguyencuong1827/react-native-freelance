@@ -9,6 +9,7 @@
       "@screens": ["screens"],
       "@types": ["types"],
       "@themes": ["themes"],
+      "@hooks": ["hooks"],
     },
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 

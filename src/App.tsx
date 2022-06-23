@@ -14,11 +14,13 @@ import {
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
 import {ProductDetailScreen} from '@screens';
+import {SlideUpController} from '@components';
 
 const App = () => {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <ProductDetailScreen />
+      <SlideUpController />
     </SafeAreaProvider>
   );
 };
