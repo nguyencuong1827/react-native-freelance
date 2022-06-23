@@ -1,6 +1,15 @@
 // prettier-ignore
 {
   "compilerOptions": {
+
+    "baseUrl": "./src",
+    "paths": {
+      "@assets": ["assets"],
+      "@components": ["components"],
+      "@screens": ["screens"],
+      "@types": ["types"],
+      "@themes": ["themes"],
+    },
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Projects */
